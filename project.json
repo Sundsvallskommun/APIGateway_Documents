@@ -1,11 +1,14 @@
 {
-  "name": "Library-Legacy",
-  "description": "Blank Library (Windows Legacy)",
+  "name": "APIGateway_Documents",
+  "projectId": "93aeb1c6-8a4f-41cb-9381-046881689471",
+  "description": "Used for the documents API.",
   "main": "NewActivity.xaml",
   "dependencies": {
+    "API.Gateway_General": "1.0.4-alpha.2",
     "UiPath.System.Activities": "24.3.1",
     "UiPath.Testing.Activities": "23.10.1",
-    "UiPath.UIAutomation.Activities": "23.10.13"
+    "UiPath.UIAutomation.Activities": "23.10.13",
+    "UiPath.WebAPI.Activities": "1.19.0-preview"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -40,8 +43,17 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
-    "modernBehavior": false
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f5cb8c1f-50c0-447e-8298-d685328c7404",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Test\\TestCase Post Documents.xaml"
+      }
+    ],
+    "modernBehavior": false,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "isTemplate": false,
