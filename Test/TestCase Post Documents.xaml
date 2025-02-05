@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_Post_Documents" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1783,1326" sap2010:WorkflowViewState.IdRef="TestCase_Post_Documents_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:a="clr-namespace:API_Gateway_General;assembly=API Gateway_General" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_Post_Documents" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1783,1165" sap2010:WorkflowViewState.IdRef="TestCase_Post_Documents_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:a="clr-namespace:API_Gateway_General;assembly=API Gateway_General" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -82,7 +82,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestCase_Post_Documents" sap:VirtualizedContainerService.HintSize="583,1261" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestCase_Post_Documents" sap:VirtualizedContainerService.HintSize="583,1100" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JToken" Name="Token" />
       <Variable x:TypeArguments="x:String" Name="DomainURL" />
@@ -100,7 +100,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="541,766" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="541,605" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Key" />
         <Variable x:TypeArguments="ss:SecureString" Name="Secret" />
@@ -184,7 +184,7 @@
                 <OutArgument x:TypeArguments="x:String">[DocumentFilePath]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">C:\Users\jon27san\Documents\test Documents API.txt</InArgument>
+                <InArgument x:TypeArguments="x:String">C:\Users\jon27san\Documents\Documents API TEST.pdf</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>
@@ -204,10 +204,10 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:GetRobotCredential>
-      <a:Get_Token ExpiresIn="{x:Null}" FoundToken="{x:Null}" TokenType="{x:Null}" DisplayName="Get Token" DomainURL="[DomainURL]" sap:VirtualizedContainerService.HintSize="479,186" sap2010:WorkflowViewState.IdRef="Get_Token_1" NumberOfTries="1" Password="[Secret]" RequestTimeout="15000" Token="[Token]" Username="[Key]">
+      <a:Get_Token ExpiresIn="{x:Null}" FoundToken="{x:Null}" TokenType="{x:Null}" DisplayName="Get Token" DomainURL="[DomainURL]" sap:VirtualizedContainerService.HintSize="479,25" sap2010:WorkflowViewState.IdRef="Get_Token_1" NumberOfTries="1" Password="[Secret]" RequestTimeout="15000" Token="[Token]" Username="[Key]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -221,46 +221,20 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Post Documents.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Post Documents.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="njl:JToken" x:Key="Token">
-            <mva:VisualBasicValue x:TypeArguments="njl:JToken" ExpressionText="Token" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="NumberOfTries">
-            <Literal x:TypeArguments="x:Int32" Value="1" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="RequestTimeout">
-            <Literal x:TypeArguments="x:Int32" Value="15000" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="DomainURL">
-            <Literal x:TypeArguments="x:String">https://api-i-test.sundsvall.se</Literal>
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="Version">
-            <Literal x:TypeArguments="x:String">3.0</Literal>
-          </InArgument>
+          <InArgument x:TypeArguments="njl:JToken" x:Key="Token">[Token]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="NumberOfTries">1</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="RequestTimeout">15000</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="DomainURL">https://api-i-test.sundsvall.se</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Version">3.0</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="MunicipalityId" />
-          <InArgument x:TypeArguments="x:String" x:Key="Description">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Description" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="CreatedBy">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CreatedBy" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:Boolean" x:Key="Confidential">
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Confidential" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="LegalCitation">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LegalCitation" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:Boolean" x:Key="Archive">
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Archive" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="TypeOfDocument">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TypeOfDocument" />
-          </InArgument>
-          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="MetadataDict">
-            <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="MetadataDict" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="DocumentFilePath">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DocumentFilePath" />
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Description">[Description]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="CreatedBy">[CreatedBy]</InArgument>
+          <InArgument x:TypeArguments="x:Boolean" x:Key="Confidential">[Confidential]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="LegalCitation">[LegalCitation]</InArgument>
+          <InArgument x:TypeArguments="x:Boolean" x:Key="Archive">[Archive]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="TypeOfDocument">[TypeOfDocument]</InArgument>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="MetadataDict">[MetadataDict]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="DocumentFilePath">[DocumentFilePath]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
